@@ -1,4 +1,4 @@
 # Budge-It
 Personal Project
 
-![ERD](assets/Budge-it%20ERD.pdf)
+![ERD](assets/Budge-it_Framework.PNG)
