@@ -1,9 +1,7 @@
 # Budge-It
 # Table of Content
-1.[Concept Description](https://github.com/phildh89/Budge-It#concept-description)
-
-2.[Entity Relationship Diagram](https://github.com/phildh89/Budge-It#entity-relationship-diagram)
-
+1.[Concept Description](https://github.com/phildh89/Budge-It#concept-description)<br/>
+2.[Entity Relationship Diagram](https://github.com/phildh89/Budge-It#entity-relationship-diagram)<br/>
 3.[Wire-Frame (Draft)](https://github.com/phildh89/Budge-It#wire-frames-draft)
 
 
