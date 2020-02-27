@@ -1,8 +1,8 @@
 # Budge-It
 # Table of Content
-1.[Concept Description](https://github.com/phildh89/Budge-It#concept-description)
-2.[Entity Relationship Diagram](https://github.com/phildh89/Budge-It#entity-relationship-diagram)
-3.[Wire-Frame (Draft)](https://github.com/phildh89/Budge-It#wire-frames-draft)
++[Concept Description](https://github.com/phildh89/Budge-It#concept-description)
++[Entity Relationship Diagram](https://github.com/phildh89/Budge-It#entity-relationship-diagram)
++[Wire-Frame (Draft)](https://github.com/phildh89/Budge-It#wire-frames-draft)
 
 # Concept Description
 This application is created to make budgeting easier!
