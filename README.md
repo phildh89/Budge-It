@@ -1,12 +1,13 @@
 # Budge-It
 # Table of Content
-1.[Concept Description](https://github.com/phildh89/Budge-It#concept-description)<br/>
-2.[User Stories](https://github.com/phildh89/Budge-It#user-stories)<br/>
-3.[Use-Case](https://github.com/phildh89/Budge-It#use-case)<br/>
-4.[UML Diagram](https://github.com/phildh89/Budge-It#uml-diagram)<br/>
-5.[Scenario](https://github.com/phildh89/Budge-It#scenario)<br/>
-6.[Entity Relationship Diagram](https://github.com/phildh89/Budge-It#entity-relationship-diagram)<br/>
+1.[Concept Description](https://github.com/phildh89/Budge-It#concept-description)
+2.[User Stories](https://github.com/phildh89/Budge-It#user-stories)
+3.[Use-Case](https://github.com/phildh89/Budge-It#use-case)
+4.[UML Diagram](https://github.com/phildh89/Budge-It#uml-diagram)
+5.[Scenario](https://github.com/phildh89/Budge-It#scenario)
+6.[Entity Relationship Diagram](https://github.com/phildh89/Budge-It#entity-relationship-diagram)
 7.[Wire-Frame (Draft)](https://github.com/phildh89/Budge-It#wire-frames-draft)
+8.[Requirements](https://github.com/phildh89/Budge-It#requirements)
 
 
 # Concept Description
@@ -52,4 +53,23 @@ After the user inputs their information, the application will be able to assist 
 
 ![Wire-Frame](assets/Budge-it_Framework.PNG)
 
+# Requirements
+
+### `1.0 Account Registration`
+The system shall allow users to register for accounts. The registration feature will be located on the home view. The user will enter personal information such as First Name, Last Name, Email, Date of Birth, Username and Password.
+
+### `1.1	Log-In Function`
+The system shall allow user will enter username and password to request the database to verify username and password match.
+
+### `1.2	Bank Account Data`
+The system shall allow user to log into bank API to pull data and push into system database. This will populate the transaction information needed for summary view page.
+
+##### `1.2.1 User input transactions`
+The system shall allow user to edit or input addition transaction information into specified account to increase readability for the user.
+
+### `1.3	Transaction Summary`
+The system shall return data from the database based on the users filter to return total usage of accounts. The view will be numeric and visual via charts
+
+### `1.4	Interest Calculator`
+The system shall all user to enter desired amount to put into savings accounts or amount to pay off debt from credit cards or loans. The system will return data based on transactions from database and APR/interest based on the account. The view will return payment or savings plans based on user input.
 
