@@ -37,7 +37,7 @@ After the user inputs their information, the application will be able to assist 
 *	The System outputs calculations on debt interest<br/>
 
 # UML Diagram
-![UML](assets/Budge-it%20UML.PNG)
+![UML](assets/Budge-it%20UML.png)
 
 # Scenario
 <p>
