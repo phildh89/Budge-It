@@ -3,9 +3,10 @@
 1.[Concept Description](https://github.com/phildh89/Budge-It#concept-description)<br/>
 2.[User Stories](https://github.com/phildh89/Budge-It#user-stories)<br/>
 3.[Use-Case](https://github.com/phildh89/Budge-It#use-case)<br/>
-4.[Scenario](https://github.com/phildh89/Budge-It#scenario)<br/>
-5.[Entity Relationship Diagram](https://github.com/phildh89/Budge-It#entity-relationship-diagram)<br/>
-6.[Wire-Frame (Draft)](https://github.com/phildh89/Budge-It#wire-frames-draft)
+4.[UML Diagram](https://github.com/phildh89/Budge-It#uml-diagram)<br/>
+5.[Scenario](https://github.com/phildh89/Budge-It#scenario)<br/>
+6.[Entity Relationship Diagram](https://github.com/phildh89/Budge-It#entity-relationship-diagram)<br/>
+7.[Wire-Frame (Draft)](https://github.com/phildh89/Budge-It#wire-frames-draft)
 
 
 # Concept Description
@@ -34,6 +35,9 @@ After the user inputs their information, the application will be able to assist 
 *	The System outputs numeric results of transactions<br/>
 *	The System outputs chart representation of transactions<br/>
 *	The System outputs calculations on debt interest<br/>
+
+# UML Diagram
+![UML](assets/Budge-it%20UML.PNG)
 
 # Scenario
 <p>
