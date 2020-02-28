@@ -1,8 +1,11 @@
 # Budge-It
 # Table of Content
 1.[Concept Description](https://github.com/phildh89/Budge-It#concept-description)<br/>
-2.[Entity Relationship Diagram](https://github.com/phildh89/Budge-It#entity-relationship-diagram)<br/>
-3.[Wire-Frame (Draft)](https://github.com/phildh89/Budge-It#wire-frames-draft)
+2.[User Stories](https://github.com/phildh89/Budge-It#user-stories)<br/>
+3.[Use-Case](https://github.com/phildh89/Budge-It#use-case)<br/>
+4.[Scenario](https://github.com/phildh89/Budge-It#scenario)<br/>
+5.[Entity Relationship Diagram](https://github.com/phildh89/Budge-It#entity-relationship-diagram)<br/>
+6.[Wire-Frame (Draft)](https://github.com/phildh89/Budge-It#wire-frames-draft)
 
 
 # Concept Description
@@ -16,12 +19,32 @@ For example - The user will be able to label their transactions Groceries, Bills
 #### More advanced features
 After the user inputs their information, the application will be able to assist the user on the best course of action on eliminating their debt. From credit cards to loans, suggests will be given to the user on what account to pay off first to avoid the largest amount of interest. Timelines and calculators will also be included. 
 
+# User Stories
+*	As a college student, I want to pay off my debt so that I pay the least amount of interest possible given my current income and lifestyle.<br/>
+*	As a parent, I want to allocate money for savings so that I have a retirement fund and college fund for my kids.<br/>
+*	As a student, I want to know where my money is being spent so that I can learn how to manage my finances.<br/>
 
-## Entity Relationship Diagram
+
+# Use-Case
+*	The User enters user information <br/>
+*	The User enters Checking account transaction<br/>
+*	The User enters Loans/Credit card transaction<br/>
+*	The User enters Savings account transaction<br/>
+*	The System stores transaction input<br/>
+*	The System outputs numeric results of transactions<br/>
+*	The System outputs chart representation of transactions<br/>
+*	The System outputs calculations on debt interest<br/>
+
+# Scenario
+<p>
+  Given when the user account has been created and transactions have been populated, when the user loads the home screen then statistics and charts will show a summary of the user’s financial standings. There will be options to look at savings and debt paying recommendations.
+  </p>
+
+# Entity Relationship Diagram
 
 ![ERD](assets/Budge-it%20ERD.png)
 
-## Wire-frames (DRAFT)
+# Wire-frames (DRAFT)
 
 ![Wire-Frame](assets/Budge-it_Framework.PNG)
 
