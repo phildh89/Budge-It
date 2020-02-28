@@ -1,13 +1,14 @@
 # Budge-It
 # Table of Content
-1.[Concept Description](https://github.com/phildh89/Budge-It#concept-description)
-2.[User Stories](https://github.com/phildh89/Budge-It#user-stories)
-3.[Use-Case](https://github.com/phildh89/Budge-It#use-case)
-4.[UML Diagram](https://github.com/phildh89/Budge-It#uml-diagram)
-5.[Scenario](https://github.com/phildh89/Budge-It#scenario)
-6.[Entity Relationship Diagram](https://github.com/phildh89/Budge-It#entity-relationship-diagram)
-7.[Wire-Frame (Draft)](https://github.com/phildh89/Budge-It#wire-frames-draft)
-8.[Requirements](https://github.com/phildh89/Budge-It#requirements)
+1. [Concept Description](https://github.com/phildh89/Budge-It#concept-description)
+2. [User Stories](https://github.com/phildh89/Budge-It#user-stories)
+3. [Use-Case](https://github.com/phildh89/Budge-It#use-case)
+4. [UML Diagram](https://github.com/phildh89/Budge-It#uml-diagram)
+5. [Scenario](https://github.com/phildh89/Budge-It#scenario)
+6. [Entity Relationship Diagram](https://github.com/phildh89/Budge-It#entity-relationship-diagram)
+7. [Wire-Frame (Draft)](https://github.com/phildh89/Budge-It#wire-frames-draft)
+8. [Requirements](https://github.com/phildh89/Budge-It#requirements)
+
 
 
 # Concept Description
