@@ -52,7 +52,9 @@ After the user inputs their information, the application will be able to assist 
 
 # Wire-frames (DRAFT)
 
-![Wire-Frame](assets/Budge-it_Framework.PNG)
+![Wire-Frame](assets/Budge-it_Framework1.PNG)
+![Wire-Frame](assets/Budge-it_Framework2.PNG)
+![Wire-Frame](assets/Budge-it_Framework3.PNG)
 
 # Requirements
 
