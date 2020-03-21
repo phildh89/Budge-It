@@ -44,7 +44,7 @@ Budgeting can be a difficult and daunting task and many people don't know where 
 
 ![ERD](assets/Budge-it%20ERD.png)
 
-# Wire-frames (DRAFT)
+# Wire-frames
 
 ![Wire-Frame](assets/Budge-it_Framework1.PNG)
 ![Wire-Frame](assets/Budge-it_Framework2.PNG)
