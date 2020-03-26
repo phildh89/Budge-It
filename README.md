@@ -8,7 +8,7 @@ Budgeting can be a difficult and daunting task and many people don't know where 
 # Table of Content
 1. [User Stories](https://github.com/phildh89/Budge-It#user-stories)
 2. [Use-Case](https://github.com/phildh89/Budge-It#use-case)
-3. [UML Diagram](https://github.com/phildh89/Budge-It#uml-diagram)
+3. [Diagram](https://github.com/phildh89/Budge-It#diagram)
 4. [Scenario](https://github.com/phildh89/Budge-It#scenario)
 5. [Entity Relationship Diagram](https://github.com/phildh89/Budge-It#entity-relationship-diagram)
 6. [Wire-Frame (Draft)](https://github.com/phildh89/Budge-It#wire-frames-draft)
@@ -32,8 +32,8 @@ Budgeting can be a difficult and daunting task and many people don't know where 
 *	The System outputs chart representation of transactions<br/>
 *	The System outputs calculations on debt interest<br/>
 
-# UML Diagram
-![UML](assets/Budge-it%20UML.png)
+# Diagram
+![Diagram](assets/Budge-it%20UML.png)
 
 # Scenario
 <p>
