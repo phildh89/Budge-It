@@ -52,22 +52,22 @@ Budgeting can be a difficult and daunting task and many people don't know where 
 
 # Requirements
 
-### `1.0 Account Registration`
+#### `1.0 Account Registration`
 The system shall allow users to register for accounts. The registration feature will be located on the home view. The user will enter personal information such as First Name, Last Name, Email, Date of Birth, Username and Password.
 
-### `1.1	Log-In Function`
+#### `1.1	Log-In Function`
 The system shall allow user will enter username and password to request the database to verify username and password match.
 
-### `1.2	Bank Account Data`
+#### `1.2	Bank Account Data`
 The system shall allow user to log into bank API to pull data and push into system database. This will populate the transaction information needed for summary view page.
 
-##### `1.2.1 User input transactions`
+###### `1.2.1 User input transactions`
 The system shall allow user to edit or input addition transaction information into specified account to increase readability for the user.
 
-### `1.3	Transaction Summary`
+#### `1.3	Transaction Summary`
 The system shall return data from the database based on the users filter to return total usage of accounts. The view will be numeric and visual via charts
 
-### `1.4	Interest Calculator`
+#### `1.4	Interest Calculator`
 The system shall all user to enter desired amount to put into savings accounts or amount to pay off debt from credit cards or loans. The system will return data based on transactions from database and APR/interest based on the account. The view will return payment or savings plans based on user input.
 
 # Requirements Table
