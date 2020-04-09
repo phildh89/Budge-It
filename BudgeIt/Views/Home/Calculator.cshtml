@@ -1,0 +1,31 @@
+﻿@{
+    ViewData["Title"] = "Calculator";
+}
+
+<html>
+
+<body class="w3-container">
+    <div data-format="$" class="w3-display-topleft" style="top:95px;left:75px">
+        <form class="w3-panel w3-card-4" action="/action_page.php">
+            <h2>Calculator Information</h2>
+            <input class="w3-radio" type="radio" name="accountType" value="male" checked>
+            <label>Savings</label>
+
+            <input class="w3-radio" type="radio" name="accountType" value="female">
+            <label>Debt Payment</label>
+            <p class="w3-border"><input class="w3-input" type="text" placeholder="Initial Amount"></p>
+            <p class="w3-border"><input class="w3-input" type="text" placeholder="Monthly Payments" ></p>
+            <div class="w3-row">
+                <div class="w3-half w3-border">
+                    <input class="w3-input" type="text" placeholder="APR %">
+                </div>
+                <div class="w3-half w3-border">
+                    <input class="w3-input" type="text" placeholder="Months to payoff">
+                </div>
+            </div>
+            <br/>
+            <p><button class="w3-btn w3-blue">Calculate</button></p>
+</form>
+    </div>
+</body>
+</html>

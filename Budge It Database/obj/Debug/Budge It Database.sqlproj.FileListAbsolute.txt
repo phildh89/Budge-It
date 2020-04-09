@@ -1,0 +1,5 @@
+C:\Users\phild\source\repos\BudgeIt\Budge It Database\bin\Debug\Budge It Database.dacpac
+C:\Users\phild\source\repos\BudgeIt\Budge It Database\bin\Debug\Budge_It_Database.dll
+C:\Users\phild\source\repos\BudgeIt\Budge It Database\bin\Debug\Budge_It_Database.pdb
+C:\Users\phild\source\repos\BudgeIt\Budge It Database\obj\Debug\Budge_It_Database.dll
+C:\Users\phild\source\repos\BudgeIt\Budge It Database\obj\Debug\Budge_It_Database.pdb
