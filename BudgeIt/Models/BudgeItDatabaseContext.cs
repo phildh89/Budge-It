@@ -16,6 +16,7 @@ namespace BudgeIt.Models
         }
 
         public virtual DbSet<AccountInfo> AccountInfo { get; set; }
+        public virtual DbSet<AccountType> AccountType { get; set; }
         public virtual DbSet<Calculator> Calculator { get; set; }
         public virtual DbSet<Checkings> Checkings { get; set; }
         public virtual DbSet<Debt> Debt { get; set; }
@@ -27,7 +28,7 @@ namespace BudgeIt.Models
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
-                optionsBuilder.UseSqlServer("Data Source=(localdb)\\ProjectsV13;Initial Catalog=BudgeItDatabase;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
+                optionsBuilder.UseSqlServer("Data Source=(localdb)\\ProjectsV13;Initial Catalog=BudgeItDatabase;Integrated Security=True");
             }
         }
 
@@ -36,36 +37,47 @@ namespace BudgeIt.Models
             modelBuilder.Entity<AccountInfo>(entity =>
             {
                 entity.HasKey(e => e.AccountId)
-                    .HasName("PK__AccountI__F267251E2DA8C4F3");
+                    .HasName("PK__tmp_ms_x__F267251E88AFCD16");
 
                 entity.Property(e => e.AccountId).HasColumnName("accountId");
 
-                entity.Property(e => e.AccountName)
+                entity.Property(e => e.AccountDescription)
                     .IsRequired()
-                    .HasColumnName("accountName")
-                    .HasMaxLength(20)
-                    .IsUnicode(false);
+                    .HasColumnName("accountDescription")
+                    .HasMaxLength(50);
 
-                entity.Property(e => e.AccountType)
-                    .IsRequired()
-                    .HasColumnName("accountType")
-                    .HasMaxLength(20)
-                    .IsUnicode(false);
+                entity.Property(e => e.AccountType).HasColumnName("accountType");
 
                 entity.Property(e => e.Apr)
                     .HasColumnName("apr")
                     .HasColumnType("decimal(18, 0)");
 
-                entity.Property(e => e.CustId).HasColumnName("custID");
-
                 entity.Property(e => e.InitialBal)
                     .HasColumnName("initialBal")
                     .HasColumnType("money");
 
-                entity.HasOne(d => d.Cust)
+                entity.Property(e => e.UserId).HasColumnName("userId");
+
+                entity.HasOne(d => d.User)
                     .WithMany(p => p.AccountInfo)
-                    .HasForeignKey(d => d.CustId)
-                    .HasConstraintName("FK_dbo.AccountInfo_dbo.UserInfo_custID");
+                    .HasForeignKey(d => d.UserId)
+                    .HasConstraintName("FK_dbo.AccountInfo_dbo.UserInfo_userId");
+            });
+
+            modelBuilder.Entity<AccountType>(entity =>
+            {
+                entity.HasKey(e => e.AccountType1)
+                    .HasName("PK__AccountT__2EAE53D7799B07CD");
+
+                entity.Property(e => e.AccountType1)
+                    .HasColumnName("accountType")
+                    .ValueGeneratedNever();
+
+                entity.Property(e => e.AccountName)
+                    .IsRequired()
+                    .HasColumnName("accountName")
+                    .HasMaxLength(50)
+                    .IsUnicode(false);
             });
 
             modelBuilder.Entity<Calculator>(entity =>
@@ -78,8 +90,6 @@ namespace BudgeIt.Models
                     .HasColumnName("apr")
                     .HasColumnType("decimal(18, 0)");
 
-                entity.Property(e => e.CustId).HasColumnName("custID");
-
                 entity.Property(e => e.IsSavingsCalc).HasColumnName("isSavingsCalc");
 
                 entity.Property(e => e.MonthlyPayment)
@@ -88,20 +98,20 @@ namespace BudgeIt.Models
 
                 entity.Property(e => e.PayOffTime).HasColumnName("payOffTime");
 
-                entity.HasOne(d => d.Cust)
+                entity.Property(e => e.UserId).HasColumnName("userId");
+
+                entity.HasOne(d => d.User)
                     .WithMany(p => p.Calculator)
-                    .HasForeignKey(d => d.CustId)
-                    .HasConstraintName("FK_dbo.Calculator_dbo.UserInfo_custID");
+                    .HasForeignKey(d => d.UserId)
+                    .HasConstraintName("FK_dbo.Calculator_dbo.UserInfo_userId");
             });
 
             modelBuilder.Entity<Checkings>(entity =>
             {
                 entity.HasKey(e => e.TransactionId)
-                    .HasName("PK__Checking__9B57CF72E1DF28A0");
+                    .HasName("PK__tmp_ms_x__9B57CF72A412E9B0");
 
-                entity.Property(e => e.TransactionId)
-                    .HasColumnName("transactionId")
-                    .ValueGeneratedNever();
+                entity.Property(e => e.TransactionId).HasColumnName("transactionId");
 
                 entity.Property(e => e.AccountId).HasColumnName("accountID");
 
@@ -114,8 +124,6 @@ namespace BudgeIt.Models
                     .HasColumnName("category")
                     .HasMaxLength(50);
 
-                entity.Property(e => e.CustId).HasColumnName("custId");
-
                 entity.Property(e => e.Date)
                     .HasColumnName("date")
                     .HasColumnType("date");
@@ -125,20 +133,20 @@ namespace BudgeIt.Models
                     .HasColumnName("description")
                     .HasMaxLength(50);
 
-                entity.HasOne(d => d.Cust)
+                entity.Property(e => e.UserId).HasColumnName("userId");
+
+                entity.HasOne(d => d.User)
                     .WithMany(p => p.Checkings)
-                    .HasForeignKey(d => d.CustId)
-                    .HasConstraintName("FK_dbo.Checkings_dbo.UserInfo_custID");
+                    .HasForeignKey(d => d.UserId)
+                    .HasConstraintName("FK_dbo.Checkings_dbo.UserInfo_userId");
             });
 
             modelBuilder.Entity<Debt>(entity =>
             {
                 entity.HasKey(e => e.TransactionId)
-                    .HasName("PK__Debt__9B57CF72A50C6D90");
+                    .HasName("PK__tmp_ms_x__9B57CF7248C7748B");
 
-                entity.Property(e => e.TransactionId)
-                    .HasColumnName("transactionId")
-                    .ValueGeneratedNever();
+                entity.Property(e => e.TransactionId).HasColumnName("transactionId");
 
                 entity.Property(e => e.AccountId).HasColumnName("accountID");
 
@@ -151,8 +159,6 @@ namespace BudgeIt.Models
                     .HasColumnName("category")
                     .HasMaxLength(50);
 
-                entity.Property(e => e.CustId).HasColumnName("custId");
-
                 entity.Property(e => e.Date)
                     .HasColumnName("date")
                     .HasColumnType("date");
@@ -161,16 +167,16 @@ namespace BudgeIt.Models
                     .IsRequired()
                     .HasColumnName("description")
                     .HasMaxLength(50);
+
+                entity.Property(e => e.UserId).HasColumnName("userId");
             });
 
             modelBuilder.Entity<Savings>(entity =>
             {
                 entity.HasKey(e => e.TransactionId)
-                    .HasName("PK__Savings__9B57CF720BA2EF68");
+                    .HasName("PK__tmp_ms_x__9B57CF729EED9213");
 
-                entity.Property(e => e.TransactionId)
-                    .HasColumnName("transactionId")
-                    .ValueGeneratedNever();
+                entity.Property(e => e.TransactionId).HasColumnName("transactionId");
 
                 entity.Property(e => e.AccountId).HasColumnName("accountID");
 
@@ -183,8 +189,6 @@ namespace BudgeIt.Models
                     .HasColumnName("category")
                     .HasMaxLength(50);
 
-                entity.Property(e => e.CustId).HasColumnName("custId");
-
                 entity.Property(e => e.Date)
                     .HasColumnName("date")
                     .HasColumnType("date");
@@ -193,14 +197,18 @@ namespace BudgeIt.Models
                     .IsRequired()
                     .HasColumnName("description")
                     .HasMaxLength(50);
+
+                entity.Property(e => e.UserId).HasColumnName("userId");
             });
 
             modelBuilder.Entity<UserInfo>(entity =>
             {
-                entity.HasKey(e => e.CustId)
-                    .HasName("PK__UserInfo__9725F2C65FA04A12");
+                entity.HasKey(e => e.UserId)
+                    .HasName("PK__tmp_ms_x__9725F2C6E2C91CA1");
 
-                entity.Property(e => e.CustId).HasColumnName("custId");
+                entity.Property(e => e.UserId)
+                    .HasColumnName("userId")
+                    .ValueGeneratedNever();
 
                 entity.Property(e => e.Email)
                     .IsRequired()

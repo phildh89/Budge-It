@@ -40,63 +40,19 @@ USE [$(DatabaseName)];
 
 
 GO
-PRINT N'Creating [dbo].[Checkings]...';
+PRINT N'Rename refactoring operation with key 49ae19c9-49b9-4879-a365-b71235b1072b is skipped, element [dbo].[Table1].[accountType] (SqlSimpleColumn) will not be renamed to accountName';
 
 
 GO
-CREATE TABLE [dbo].[Checkings] (
-    [accountID]     INT           NOT NULL,
-    [custId]        INT           NOT NULL,
-    [transactionId] INT           NOT NULL,
-    [date]          DATE          NULL,
-    [description]   NVARCHAR (50) NOT NULL,
-    [category]      NVARCHAR (50) NOT NULL,
-    [amount]        MONEY         NOT NULL,
-    PRIMARY KEY CLUSTERED ([transactionId] ASC)
-);
+PRINT N'Rename refactoring operation with key 6a0c161e-4780-47ea-a340-81d11fea79ff is skipped, element [dbo].[Table1].[Id] (SqlSimpleColumn) will not be renamed to accountType';
 
 
 GO
-PRINT N'Creating [dbo].[Debt]...';
+PRINT N'Rename refactoring operation with key 0403864e-51c1-436b-9a95-6651daca03f8 is skipped, element [dbo].[AccountInfo].[accountName] (SqlSimpleColumn) will not be renamed to accountDescription';
 
 
 GO
-CREATE TABLE [dbo].[Debt] (
-    [accountID]     INT           NOT NULL,
-    [custId]        INT           NOT NULL,
-    [transactionId] INT           NOT NULL,
-    [date]          DATE          NULL,
-    [description]   NVARCHAR (50) NOT NULL,
-    [category]      NVARCHAR (50) NOT NULL,
-    [amount]        MONEY         NOT NULL,
-    PRIMARY KEY CLUSTERED ([transactionId] ASC)
-);
-
-
-GO
-PRINT N'Creating [dbo].[Savings]...';
-
-
-GO
-CREATE TABLE [dbo].[Savings] (
-    [accountID]     INT           NOT NULL,
-    [custId]        INT           NOT NULL,
-    [transactionId] INT           NOT NULL,
-    [date]          DATE          NULL,
-    [description]   NVARCHAR (50) NOT NULL,
-    [category]      NVARCHAR (50) NOT NULL,
-    [amount]        MONEY         NOT NULL,
-    PRIMARY KEY CLUSTERED ([transactionId] ASC)
-);
-
-
-GO
-PRINT N'Creating [dbo].[FK_dbo.Checkings_dbo.UserInfo_custID]...';
-
-
-GO
-ALTER TABLE [dbo].[Checkings] WITH NOCHECK
-    ADD CONSTRAINT [FK_dbo.Checkings_dbo.UserInfo_custID] FOREIGN KEY ([custId]) REFERENCES [dbo].[UserInfo] ([custId]) ON DELETE CASCADE;
+PRINT N'Rename refactoring operation with key 1becd508-ee2d-4d93-9919-2c8aff6ac8f7 is skipped, element [dbo].[UserInfo].[userId] (SqlSimpleColumn) will not be renamed to userId';
 
 
 GO
@@ -109,15 +65,6 @@ ALTER TABLE [dbo].[Checkings] WITH NOCHECK
 
 
 GO
-PRINT N'Creating [dbo].[FK_dbo.Debt_dbo.UserInfo_custID]...';
-
-
-GO
-ALTER TABLE [dbo].[Debt] WITH NOCHECK
-    ADD CONSTRAINT [FK_dbo.Debt_dbo.UserInfo_custID] FOREIGN KEY ([custId]) REFERENCES [dbo].[UserInfo] ([custId]) ON DELETE CASCADE;
-
-
-GO
 PRINT N'Creating [dbo].[FK_dbo.Debt_dbo.AccountInfo_accountID]...';
 
 
@@ -127,12 +74,12 @@ ALTER TABLE [dbo].[Debt] WITH NOCHECK
 
 
 GO
-PRINT N'Creating [dbo].[FK_dbo.Savings_dbo.UserInfo_custID]...';
+PRINT N'Creating [dbo].[FK_dbo.Debt_dbo.UserInfo_userId]...';
 
 
 GO
-ALTER TABLE [dbo].[Savings] WITH NOCHECK
-    ADD CONSTRAINT [FK_dbo.Savings_dbo.UserInfo_custID] FOREIGN KEY ([custId]) REFERENCES [dbo].[UserInfo] ([custId]) ON DELETE CASCADE;
+ALTER TABLE [dbo].[Debt] WITH NOCHECK
+    ADD CONSTRAINT [FK_dbo.Debt_dbo.UserInfo_userId] FOREIGN KEY ([userId]) REFERENCES [dbo].[UserInfo] ([userId]) ON DELETE CASCADE;
 
 
 GO
@@ -145,6 +92,39 @@ ALTER TABLE [dbo].[Savings] WITH NOCHECK
 
 
 GO
+PRINT N'Creating [dbo].[FK_dbo.Savings_dbo.UserInfo_userId]...';
+
+
+GO
+ALTER TABLE [dbo].[Savings] WITH NOCHECK
+    ADD CONSTRAINT [FK_dbo.Savings_dbo.UserInfo_userId] FOREIGN KEY ([userId]) REFERENCES [dbo].[UserInfo] ([userId]) ON DELETE CASCADE;
+
+
+GO
+-- Refactoring step to update target server with deployed transaction logs
+
+IF OBJECT_ID(N'dbo.__RefactorLog') IS NULL
+BEGIN
+    CREATE TABLE [dbo].[__RefactorLog] (OperationKey UNIQUEIDENTIFIER NOT NULL PRIMARY KEY)
+    EXEC sp_addextendedproperty N'microsoft_database_tools_support', N'refactoring log', N'schema', N'dbo', N'table', N'__RefactorLog'
+END
+GO
+IF NOT EXISTS (SELECT OperationKey FROM [dbo].[__RefactorLog] WHERE OperationKey = '49ae19c9-49b9-4879-a365-b71235b1072b')
+INSERT INTO [dbo].[__RefactorLog] (OperationKey) values ('49ae19c9-49b9-4879-a365-b71235b1072b')
+IF NOT EXISTS (SELECT OperationKey FROM [dbo].[__RefactorLog] WHERE OperationKey = '6a0c161e-4780-47ea-a340-81d11fea79ff')
+INSERT INTO [dbo].[__RefactorLog] (OperationKey) values ('6a0c161e-4780-47ea-a340-81d11fea79ff')
+IF NOT EXISTS (SELECT OperationKey FROM [dbo].[__RefactorLog] WHERE OperationKey = '0403864e-51c1-436b-9a95-6651daca03f8')
+INSERT INTO [dbo].[__RefactorLog] (OperationKey) values ('0403864e-51c1-436b-9a95-6651daca03f8')
+IF NOT EXISTS (SELECT OperationKey FROM [dbo].[__RefactorLog] WHERE OperationKey = '1becd508-ee2d-4d93-9919-2c8aff6ac8f7')
+INSERT INTO [dbo].[__RefactorLog] (OperationKey) values ('1becd508-ee2d-4d93-9919-2c8aff6ac8f7')
+
+GO
+
+GO
+SELECT * FROM UserInfo
+GO
+
+GO
 PRINT N'Checking existing data against newly created constraints';
 
 
@@ -153,17 +133,15 @@ USE [$(DatabaseName)];
 
 
 GO
-ALTER TABLE [dbo].[Checkings] WITH CHECK CHECK CONSTRAINT [FK_dbo.Checkings_dbo.UserInfo_custID];
-
 ALTER TABLE [dbo].[Checkings] WITH CHECK CHECK CONSTRAINT [FK_dbo.Checkings_dbo.AccountInfo_accountID];
-
-ALTER TABLE [dbo].[Debt] WITH CHECK CHECK CONSTRAINT [FK_dbo.Debt_dbo.UserInfo_custID];
 
 ALTER TABLE [dbo].[Debt] WITH CHECK CHECK CONSTRAINT [FK_dbo.Debt_dbo.AccountInfo_accountID];
 
-ALTER TABLE [dbo].[Savings] WITH CHECK CHECK CONSTRAINT [FK_dbo.Savings_dbo.UserInfo_custID];
+ALTER TABLE [dbo].[Debt] WITH CHECK CHECK CONSTRAINT [FK_dbo.Debt_dbo.UserInfo_userId];
 
 ALTER TABLE [dbo].[Savings] WITH CHECK CHECK CONSTRAINT [FK_dbo.Savings_dbo.AccountInfo_accountID];
+
+ALTER TABLE [dbo].[Savings] WITH CHECK CHECK CONSTRAINT [FK_dbo.Savings_dbo.UserInfo_userId];
 
 
 GO
