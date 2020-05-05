@@ -1,6 +1,6 @@
 # Table of Content
-1. [Sprint 1](https://github.com/phildh89/Budge-It/sprint#Sprint-1)
-2. [Sprint 2](https://github.com/phildh89/Budge-It/sprint#Sprint-2)
+1. [Sprint 1](https://github.com/phildh89/Budge-It/blob/master/sprint/readme.MD#sprint-1)
+2. [Sprint 2](https://github.com/phildh89/Budge-It/blob/master/sprint/readme.MD#sprint-2)
 
 # Sprint 1
 22 APR 2020
