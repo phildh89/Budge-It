@@ -8,6 +8,9 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using BudgeIt.Models;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Mvc;
 
 namespace BudgeIt
 {
@@ -24,6 +27,12 @@ namespace BudgeIt
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            services.AddDbContext<ApplicationDbContext>(options =>
+            options.UseSqlServer(
+                Configuration["Data:BudgeItDatabase:ConnectionString"]));
+            services.AddTransient<ICheckingsRepository, EFCheckingsRepository>();
+            services.AddTransient<ISavingsRepository, EFSavingsRepository>();
+            services.AddTransient<IDebtRepository, EFDebtRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -32,7 +41,11 @@ namespace BudgeIt
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+                app.UseStatusCodePages();
+                app.UseStaticFiles();
+
             }
+                
             else
             {
                 app.UseExceptionHandler("/Home/Error");

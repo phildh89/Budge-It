@@ -17,21 +17,7 @@ namespace BudgeIt.Controllers
         {
             _logger = logger;
         }
-        //TODO: Copy below to reach Views
         public IActionResult Index()
-        {
-            //TODO: If logged in return summary. If not, return login view.
-            return View();
-        }
-        public IActionResult Savings()
-        {
-            return View();
-        }
-        public IActionResult Debts()
-        {
-            return View();
-        }
-        public IActionResult Checkings()
         {
             return View();
         }

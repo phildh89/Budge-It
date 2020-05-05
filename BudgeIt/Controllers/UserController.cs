@@ -4,12 +4,14 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using BudgeIt.Models;
+using System.Web;
+
 
 namespace BudgeIt.Controllers
 {
     public class UserController : Controller
     {
-        public IActionResult UserReg(int id = 0)
+        public IActionResult UserReg(int id)
         {
             UserInfo user = new UserInfo();
             return View();
@@ -33,7 +35,7 @@ namespace BudgeIt.Controllers
             }
             ModelState.Clear();
             ViewBag.SuccessMessage = "Your account has been created!";
-            return View("UserReg", new UserInfo()); //TODO: Route user to log in screen after success
+            return View("Login", new UserInfo()); //TODO: Route user to log in screen after success
         }
         public IActionResult Login()
         {
@@ -52,10 +54,26 @@ namespace BudgeIt.Controllers
                 }
                 else
                 {
-                    //Session["userID"] = user.UserID;
+                    //TODO: Troubleshoot user session
+                    //Session["userId"] = user.UserId;
+                    //This displays first name on home page
+                    //Session["firstName"] = user.firstName;
+                    return RedirectToAction("Index", "Home");
+                    //TODO: Add to _Layout to redirect to login if no logged in
+                    //if (Session["userId"] == null)
+                    //{
+                    //    Response.Redirect("~/User/Login");
+                    //}
+
                 }
             }
-            return View();
+        }
+        public IActionResult LogOut()
+        {
+            //TODO: Uncomment after fixing session error
+            //int userId = (int) Session["userId"];
+            //Session.Abandon();
+            return RedirectToAction("Login","User");
         }
     }
 

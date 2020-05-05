@@ -1,0 +1,28 @@
+﻿@model ListViewModel
+
+
+<table>
+    <tr>
+        <th>Date </th>
+        <th>Description </th>
+        <th>Category </th>
+        <th>Amount</th>
+    </tr>
+
+    @foreach (var p in Model.Debt)
+    {
+        <tr>
+            <td>@String.Format("{0:dd/MM/yyyy}", p.Date)</td>
+            <td>@p.Description</td>
+            <td>@p.Category</td>
+            <td>@String.Format("{0:c}", p.Amount)</td>
+        </tr>
+    }
+</table>
+
+
+<div page-model="@Model.PagingInfo" page-action="List" page-classes-enabled="true"
+     page-class="btn" page-class-normal="btn-secondary"
+     page-class-selected="btn-primary" page-url-category="@Model.CurrentCategory"
+     page-class-selected="btn-primary" class="btn-group pull-right m-1">
+</div>

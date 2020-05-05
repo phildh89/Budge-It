@@ -28,7 +28,7 @@ namespace BudgeIt.Models
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
-                optionsBuilder.UseSqlServer("Data Source=(localdb)\\ProjectsV13;Initial Catalog=BudgeItDatabase;Integrated Security=True");
+                optionsBuilder.UseSqlServer("Data Source=(localdb)\\ProjectsV13;Initial Catalog=BudgeItDatabase;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
             }
         }
 
@@ -204,11 +204,9 @@ namespace BudgeIt.Models
             modelBuilder.Entity<UserInfo>(entity =>
             {
                 entity.HasKey(e => e.UserId)
-                    .HasName("PK__tmp_ms_x__9725F2C6E2C91CA1");
+                    .HasName("PK__tmp_ms_x__CB9A1CFF0A3A786D");
 
-                entity.Property(e => e.UserId)
-                    .HasColumnName("userId")
-                    .ValueGeneratedNever();
+                entity.Property(e => e.UserId).HasColumnName("userId");
 
                 entity.Property(e => e.Email)
                     .IsRequired()

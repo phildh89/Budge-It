@@ -26,8 +26,15 @@ using BudgeIt.Models;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 3 "C:\Users\phild\source\repos\Budge-It\BudgeIt\Views\_ViewImports.cshtml"
+using BudgeIt.Models.ViewModels;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"607cdacb054a906b6898bfcdcfa282890f898292", @"/Views/Home/Calculator.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"ef974c082eeaa539bce2cef139e5bef02dd317aa", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"cb6baeca01c1ce5f6173993bd9ddd9d31f0cd3ea", @"/Views/_ViewImports.cshtml")]
     public class Views_Home_Calculator : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("class", new global::Microsoft.AspNetCore.Html.HtmlString("w3-panel w3-card-4"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -68,9 +75,9 @@ using BudgeIt.Models;
 #line hidden
 #nullable disable
             WriteLiteral("\r\n<html>\r\n\r\n");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "607cdacb054a906b6898bfcdcfa282890f8982924621", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "607cdacb054a906b6898bfcdcfa282890f8982924806", async() => {
                 WriteLiteral("\r\n    <div data-format=\"$\" class=\"w3-display-topleft\" style=\"top:95px;left:75px\">\r\n        ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "607cdacb054a906b6898bfcdcfa282890f8982924976", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "607cdacb054a906b6898bfcdcfa282890f8982925161", async() => {
                     WriteLiteral(@"
             <h2>Calculator Information</h2>
             <input class=""w3-radio"" type=""radio"" name=""accountType"" value=""male"" checked>
