@@ -22,13 +22,14 @@ I would make the sprint tasks more achievable. I originally created the sprint t
 
 # Sprint 2
 27 APR 2020
-![Sprint](/sprint/Sprint4.png)
+![Sprint](/sprint/Sprint4.PNG)
 28 APR 2020
-![Sprint](/sprint/Sprint5.png)
+![Sprint](/sprint/Sprint5.PNG)
 30 APR 2020
-![Sprint](/sprint/Sprint6.png)
+![Sprint](/sprint/Sprint6.PNG)
 01 MAY 2020
-![Sprint](/sprint/Sprint7.png)
+![Sprint](/sprint/Sprint7.PNG)
+![Burndown Chart](/sprint/Burndown%20Chart2.PNG)
 *	Did you complete all items in your sprint plan?<br/>
 Yes, I made the tasks easier to finish within a week.<br/>
 *	What is your sprint deliverable? (shippable product(s))<br/>
