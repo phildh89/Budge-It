@@ -41,5 +41,7 @@ Not really because I want to finish the foundation, like the tables and data, be
 I believe having smaller tasks helped achive more til week because its less overwhelming and gives more direction.<br/>
 
 # Sprint 3
-Mobile View
+##Mobile View
 ![Sprint](/sprint/mobileView.PNG)![Sprint](/sprint/mobileView2.PNG)
+##Web View
+![Sprint](/sprint/webView.PNG)
