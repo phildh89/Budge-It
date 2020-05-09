@@ -1,7 +1,7 @@
 # Table of Content
-1. [Sprint 1](https://github.com/phildh89/Budge-It/tree/master/sprint#sprint-1)
-2. [Sprint 2](https://github.com/phildh89/Budge-It/tree/master/sprint#sprint-2)
-2. [Sprint 3](https://github.com/phildh89/Budge-It/tree/master/sprint#sprint-3)
+1. [Sprint 1](https://github.com/phildh89/Budge-It/blob/master/sprint/readme.MD#sprint-1)
+2. [Sprint 2](https://github.com/phildh89/Budge-It/blob/master/sprint/readme.MD#sprint-2)
+2. [Sprint 3](https://github.com/phildh89/Budge-It/blob/master/sprint/readme.MD#sprint-3)
 
 # Sprint 1
 22 APR 2020
@@ -41,7 +41,7 @@ Not really because I want to finish the foundation, like the tables and data, be
 I believe having smaller tasks helped achive more til week because its less overwhelming and gives more direction.<br/>
 
 # Sprint 3
-##Mobile View
+## Mobile View
 ![Sprint](/sprint/mobileView.PNG)![Sprint](/sprint/mobileView2.PNG)
-##Web View
+## Web View
 ![Sprint](/sprint/webView.PNG)
