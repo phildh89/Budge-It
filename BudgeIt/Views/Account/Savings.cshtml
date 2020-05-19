@@ -1,21 +1,21 @@
 ﻿@model ListViewModel
 
 
-<table>
+<table class="table table-striped table-bordered col100">
     <tr>
-        <th>Date </th>
-        <th>Description </th>
-        <th>Category </th>
-        <th>Amount</th>
+        <th scope="col">Date </th>
+        <th scope="col">Description </th>
+        <th scope="col">Category </th>
+        <th scope="col">Amount</th>
     </tr>
 
     @foreach (var p in Model.Savings)
     {
         <tr>
-            <td>@String.Format("{0:dd/MM/yyyy}", p.Date)</td>
-            <td>@p.Description</td>
-            <td>@p.Category</td>
-            <td>@String.Format("{0:c}", p.Amount)</td>
+            <td scope="row">@String.Format("{0:dd/MM/yyyy}", p.Date)</td>
+            <td scope="row">@p.Description</td>
+            <td scope="row">@p.Category</td>
+            <td scope="row">@String.Format("{0:c}", p.Amount)</td>
         </tr>
     }
 </table>

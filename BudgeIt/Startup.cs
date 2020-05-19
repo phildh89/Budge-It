@@ -29,7 +29,7 @@ namespace BudgeIt
             services.AddControllersWithViews();
             services.AddDbContext<ApplicationDbContext>(options =>
             options.UseSqlServer(
-                Configuration["Data:BudgeItDatabase:ConnectionString"]));
+                Configuration["Data:BudgeItDatabase:AZConnectionString"]));
             services.AddTransient<ICheckingsRepository, EFCheckingsRepository>();
             services.AddTransient<ISavingsRepository, EFSavingsRepository>();
             services.AddTransient<IDebtRepository, EFDebtRepository>();

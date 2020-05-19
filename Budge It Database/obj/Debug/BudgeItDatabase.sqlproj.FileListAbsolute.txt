@@ -6,10 +6,5 @@ C:\Users\phild\source\repos\BudgeIt\Budge It Database\obj\Debug\Budge_It_Databas
 C:\Users\phild\source\repos\Budge-It\Budge It Database\bin\Debug\BudgeItDatabase.dacpac
 C:\Users\phild\source\repos\Budge-It\Budge It Database\bin\Debug\Budge_It_Database.dll
 C:\Users\phild\source\repos\Budge-It\Budge It Database\bin\Debug\Budge_It_Database.pdb
-C:\Users\phild\source\repos\Budge-It\Budge It Database\obj\Debug\Model.xml
-C:\Users\phild\source\repos\Budge-It\Budge It Database\obj\Debug\refactor.xml
-C:\Users\phild\source\repos\Budge-It\Budge It Database\obj\Debug\postdeploy.sql
-C:\Users\phild\source\repos\Budge-It\Budge It Database\obj\Debug\predeploy.sql
 C:\Users\phild\source\repos\Budge-It\Budge It Database\obj\Debug\Budge_It_Database.dll
 C:\Users\phild\source\repos\Budge-It\Budge It Database\obj\Debug\Budge_It_Database.pdb
-C:\Users\phild\source\repos\Budge-It\Budge It Database\obj\Debug\BudgeItDatabase.sqlprojAssemblyReference.cache

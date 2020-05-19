@@ -290,3 +290,4 @@ C:\Users\phild\source\repos\Budge-It\BudgeIt\obj\Debug\netcoreapp3.1\staticwebas
 C:\Users\phild\source\repos\Budge-It\BudgeIt\obj\Debug\netcoreapp3.1\BudgeIt.dll
 C:\Users\phild\source\repos\Budge-It\BudgeIt\obj\Debug\netcoreapp3.1\BudgeIt.pdb
 C:\Users\phild\source\repos\Budge-It\BudgeIt\obj\Debug\netcoreapp3.1\BudgeIt.genruntimeconfig.cache
+C:\Users\phild\source\repos\Budge-It\BudgeIt\bin\Debug\netcoreapp3.1\libman.json

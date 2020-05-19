@@ -1,4 +1,14 @@
 ﻿
+.col25{
+    width: 25%;
+}
+.col75 {
+    width: 75%;
+}
+.col100 {
+    width: 100%;
+}
+
 
 a.navbar-brand {
   white-space: normal;
@@ -61,12 +71,13 @@ html {
 
 body {
     /* Margin bottom by footer height */
-    background-image: url(../assets/piggybank.jpg);
+    background-color: #CCCCCC;
+    /*background-image: url(../assets/piggybank.jpg);
     background-size:800px;
     background-position:left;
     background-repeat: no-repeat;
     
-    margin-bottom: 60px;
+    margin-bottom: 60px;*/
 }
 .footer {
   position: absolute;
