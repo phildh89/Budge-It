@@ -15,6 +15,7 @@ Budgeting can be a difficult and daunting task and many people don't know where 
 7. [Requirements](https://github.com/phildh89/Budge-It#requirements)
 8. [Requirements Table](https://github.com/phildh89/Budge-It#requirements-table)
 9. [Test Table](https://github.com/phildh89/Budge-It#test-table)
+9. [Lessons Learned](https://github.com/phildh89/Budge-It#lessons-learned)
 
 # User Stories
 *	As a college student, I want to pay off my debt so that I pay the least amount of interest possible given my current income and lifestyle.<br/>
@@ -98,3 +99,14 @@ T004|6|Click through website to ensure all navigational buttons works as intende
 T005|8, 9|Test debt and savings calculator with test inputs and save informtion. Exit and reenter the webpage to check if saved information returns.|Not tested||
 T006|10|Inspect if suggested payment and savings options are returned.|Not tested||
 T007|11|Log out of test account and ensure the follow page is the log in page.|Not tested||
+
+
+# Lessons Learned
+what did you do right?<br/>
+-I was able to get a solid understand of what I should have done and a good template to reuse to better the application in the future.<br/>
+what did you do wrong?<br/>
+-I tried to implement too many things not knowing it will be covered in the future in the course. IE, Authentication and authorization was covered 2 weeks after my personal attempt.<br/>
+where were you lucky?<br/>
+-There are a few pieces in my project that work but are not coded well. Knowing this, I will rework how I code and place things in MVC to make it neater and work more effectively.<br/>
+what would you change / what do you know now that you wish you knew "then"?<br/>
+-I wish I would have slowed down in developing parts of the application because I learned a lot in the course after trying to implement them into my application. I have a solid foundation and will come back to this project after the course is over.
